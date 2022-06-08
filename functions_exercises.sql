@@ -33,4 +33,6 @@ SELECT CONCAT(first_name, ' ', last_name) FROM employees WHERE last_name LIKE 'E
 SELECT * FROM employees WHERE last_name LIKE '%Q%' AND last_name
     NOT LIKE '%QU%';
 
+SELECT * FROM employees WHERE birth_date LIKE '%12-25';
+
 
