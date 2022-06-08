@@ -41,7 +41,9 @@ WHERE year(birth_date) LIKE '199%'
 AND month(birth_date) = 12
 AND day(birth_date) = 25;
 
-SELECT *
+SELECT CONCAT (
+    datediff(NOW(),hire_date))
+     AS days_employed, birth_date, hire_date
 FROM employees
 WHERE year(hire_date) BETWEEN 1990 AND 1999
   AND month(birth_date) = 12
