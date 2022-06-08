@@ -3,10 +3,13 @@ USE employees;
 SELECT * FROM employees WHERE first_name IN ('Irena', 'Vidya', 'Maya');
 
 SELECT * FROM employees WHERE first_name IN ('Irena', 'Vidya', 'Maya')
-ORDER BY  first_name;
+ORDER BY first_name;
 
 SELECT * FROM employees WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 ORDER BY  first_name, last_name;
+
+SELECT * FROM employees WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+ORDER BY  last_name, first_name;
 
 
 SELECT * FROM employees WHERE first_name = 'Irena' OR first_name = 'Vidya'
