@@ -35,4 +35,14 @@ SELECT * FROM employees WHERE last_name LIKE '%Q%' AND last_name
 
 SELECT * FROM employees WHERE birth_date LIKE '%12-25';
 
+SELECT *
+FROM employees
+WHERE year(birth_date) LIKE '199%'
+AND month(birth_date) = 12
+AND day(birth_date) = 25;
 
+SELECT *
+FROM employees
+WHERE year(birth_date) BETWEEN 1990 AND 1999
+  AND month(birth_date) = 12
+  AND day(birth_date) = 25;
