@@ -4,3 +4,4 @@ SELECT * FROM employees WHERE first_name
 
 SELECT * FROM employees WHERE last_name LIKE 'E%';
 
+SELECT * FROM employees WHERE last_name LIKE '%Q%';
