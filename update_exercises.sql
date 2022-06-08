@@ -1,3 +1,7 @@
 USE codeup_test_db;
-SELECT 'All albums in the table: ', name FROM albums;
-SELECT 'All albums released before 1980: ', name FROM albums WHERE release_date < '1980';
+SELECT 'Album Name' AS 'All albums in the table: ', name, release_date, sales FROM albums;
+UPDATE albums
+SET sales=sales*10;
+SELECT 'Sales' AS 'Sales growth', sales FROM albums;
+SELECT 'Album Name' AS 'All albums released before 1980: ', name, release_date FROM albums WHERE release_date < '1980';
+SELECT 'Album Name' AS 'Albums by Michael Jackson', name FROM albums WHERE artist = 'Michael Jackson';
