@@ -1,6 +1,7 @@
 USE employees;
 
-SELECT CONCAT(last_name, ', ', first_name) AS full_name
+SELECT CONCAT(last_name, ', ', first_name), birth_date
+AS full_name
 FROM employees
 LIMIT 10;
 
