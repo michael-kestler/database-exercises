@@ -15,3 +15,4 @@ WHERE last_name LIKE '%Q%' AND last_name
     NOT LIKE '%QU%'
 GROUP BY last_name
 ORDER BY COUNT(*) DESC;
+
