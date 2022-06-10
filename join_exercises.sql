@@ -1,5 +1,6 @@
 USE employees;
 
+#each department with the name of the current manager of that department
 SELECT d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager'
 FROM employees as e
          JOIN dept_manager as de
@@ -9,6 +10,8 @@ FROM employees as e
         WHERE de.to_date = '9999-01-01';
 ;
 
+
+#name of all departments managed by women
 SELECT d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager'
 FROM employees as e
          JOIN dept_manager as de
@@ -18,6 +21,7 @@ FROM employees as e
 WHERE de.to_date = '9999-01-01' AND gender = 'f';
 ;
 
+#current titles of employees working in the customer service department
 SELECT t.title as title, COUNT(*) AS Total
 FROM titles as t
          JOIN dept_emp as de on t.emp_no = de.emp_no
@@ -39,16 +43,7 @@ GROUP BY title;
 # SELECT * FROM dept_emp;
 
 
-
-
-
-
-
-
-
-
-
-
+#current salary of all managers
 SELECT d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name)
     AS 'Department Manager', s.salary AS 'Salary'
 FROM employees as e
