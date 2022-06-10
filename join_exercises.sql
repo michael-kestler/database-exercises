@@ -18,6 +18,32 @@ FROM employees as e
 WHERE de.to_date = '9999-01-01' AND gender = 'f';
 ;
 
+SELECT t.title as title, COUNT(*) AS Total
+FROM titles as t
+         JOIN dept_emp as de on t.emp_no = de.emp_no
+        JOIN departments as d on de.dept_no = d.dept_no
+
+WHERE t.to_date = '9999-01-01'
+AND dept_name = 'Customer Service'
+AND de.to_date = '9999-01-01'
+GROUP BY title;
+
+# DESCRIBE departments;
+#
+# SELECT * FROM titles;
+#
+# SELECT dept_name from departments where dept_name = 'Customer Service';
+#
+# SELECT * FROM departments ;
+#
+# SELECT * FROM dept_emp;
+
+
+
+
+
+
+
 
 
 
